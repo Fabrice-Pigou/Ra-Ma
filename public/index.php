@@ -6,8 +6,21 @@ require '../vendor/autoload.php';
 $router = new App\Router(ROOT .'/controllers', ROOT);
 
 $router
-	//	Home page
 	// 'URL' 'Chemin a partier du dossier controllers' 'Nom de la route'
+
+	/*-------------------------------------*\
+		HOME PAGE
+	\*-------------------------------------*/
 	->get('/', 'home', 'home')
+
+	/*-------------------------------------*\
+		EXEMPLE
+	\*-------------------------------------*/
+	->match('/fixed/[update|delete:action]?/[i:id]?', 'fixed', 'fixed')
+
+	/*---------------------------------------------------------------------------*\
+		DEFAULT
+	\*---------------------------------------------------------------------------*/
+	->get('*', 'default', 'default')
 
 	->run();
