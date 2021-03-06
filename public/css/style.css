@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Oswald|Roboto|EB+Garamond');
+@font-face {
+	font-family: "Dauphinn";
+	src: url("fonts/DAUPHINN_0.TTF") format("truetype");
+}
+/**
+ *	font-family: 'Abril Fatface', cursive;
+ *	font-family: 'Lobster', cursive;
+ *	font-family: 'Roboto', sans-serif;
+ *	font-family: 'Oswald', sans-serif;
+ *	font-family: 'EB Garamond', serif;
+ *	font-family: 'Dauphinn', serif;
+ **/
+
+/*-----------------------------------------------*\
+		DOSSIER BASICS
+\*-----------------------------------------------*/
+@import "basics/form.css";
+@import "basics/normalize.css";
+@import "basics/primary.css";
+@import "basics/table.css";
+/*-----------------------------------------------*\
+		DOSSIER LAYOUTS
+\*-----------------------------------------------*/
+@import "layouts/base.css";
+@import "layouts/bbcode.css";
+@import "layouts/common.css";
+@import "layouts/content.css";
+@import "layouts/form.css";
+@import "layouts/home.css";
+@import "layouts/table.css";
+@import "layouts/template.css";
+/*-----------------------------------------------*\
+		DOSSIER MODULES
+\*-----------------------------------------------*/
+@import "modules/button.css";
+@import "modules/content.css";
+@import "modules/flashbag.css";
+@import "modules/form.css";
+@import "modules/slider.css";
+@import "modules/table.css";
+/*-----------------------------------------------*\
+		DOSSIER STATES
+\*-----------------------------------------------*/
+@import "states/form.css";
+@import "states/layout.css";
+@import "states/table.css";
+
+/*-----------------------------------------------*\
+		LES COULEURS
+\*-----------------------------------------------*/
+:root {
+	--primary		: #3a5199;
+	--secondary		: #ffffff;
+	--tertiary		: #d5d6d2;
+	--quaternary	: #2f2e33;
+
+	--text		: #333333;
+	--alert		: #f00;
+	--info		: #0ff;
+	--warning	: #ff0;
+
+	--bg-primary	: rgba(0, 0, 0, 0.3);
+	--bg-secondary	: rgba(255, 0, 0, 0.5);
+	--bg-tertiary	: rgba(0, 255, 255, 0.5);
+	--bg-quaternary	: rgba(255, 255, 0, 0.5);
+}
+
+.xe-warning{
+	font-size: 2rem;
+}
+.xdebug-var-dump font{
+	color: #0f0;
+}
+.xdebug-var-dump{
+	background-color: #27333d;
+	max-width: 1000px;
+	margin: 20px auto;
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff;
+}
+footer .xdebug-var-dump{
+	background-color: transparent;
+	width: auto;
+	padding: 0;
+}

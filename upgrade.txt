@@ -1,0 +1,29 @@
+|---controllers
+|	|---
+|
+|---lib
+|	|---
+|
+|---public
+|	|---
+|
+|---src
+|	|---Controls
+|	|	|---modify.php
+|	|
+|	|---Html
+|	|	|---
+|	|
+|	|---lib
+|	|	|---
+|	|
+|	|---Tables
+|	|	|---shopping.php
+|	|	|---Articles.php
+|			
+|---views
+	|---layout
+	|	|---header.html
+	|
+	|---dlc.html
+	|---form.html

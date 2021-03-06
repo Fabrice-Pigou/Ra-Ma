@@ -1,0 +1,101 @@
+.bbcode-lien{
+	color: var(--primary-3);
+}
+.bbcode-lien:hover{
+color: var(--primary-2);
+}
+.bbcode-lien:active {
+
+}
+.bbcode-img{
+	border-radius: 15px;
+	box-shadow: 2px 2px 10px #000;
+	display: block;
+	height: auto;
+	margin-top: 1rem;
+	margin: 0 auto;
+	width: 80%;
+}
+.bbcode-icon{
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #000;
+	border: 1px solid gray;
+	height: auto;
+	margin-top: 1rem;
+}
+.bbcode-h1{
+	display: inline-block;
+	font-family: 'Abril Fatface', cursive;
+	font-size: 3rem;
+	margin-bottom: 10px;
+	width: 100%;
+	padding-left: 50px;
+	font-weight: bold;
+}
+.bbcode-h2{
+	display: inline-block;
+    font-family: 'Abril Fatface', cursive;
+	font-size: 2.6rem;
+	margin: 0 0 10px;
+    font-weight: bold;
+}
+.bbcode-h3{
+	font-size: 2.3rem;
+    font-family: 'Abril Fatface', cursive;
+	margin-bottom: 10px;
+	display: inline-block;
+    font-weight: bold;
+}
+.bbcode-h4{
+	font-size: 2rem;
+    font-family: 'Abril Fatface', cursive;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+.black{
+	color: black;
+}
+.rouge{
+	color: red;
+}
+.vert{
+	color: green;
+}
+.bleu{
+	color: blue;
+}
+.jaune{
+	color: #daa520;
+}
+.fuchsia{
+	color: fuchsia;
+}
+.aqua{
+	color: aqua;
+}
+.blanc{
+	color: white;
+}
+.bbcode-com{
+	color: var(--primary-3);
+	font-weight: bold;
+}
+.bbcode-code{
+	background: rgba(0,0,0,.1);
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,.5);
+	display: inline-block;
+	padding: 0px 7px 1px;
+	line-height: 2rem;
+}
+.bbcode-key{
+	background-color: #eee;
+	border-bottom: 3px solid #000;
+	border-left: 1px solid #000;
+	border-radius: 5px;
+	border-right: 2px solid #000;
+	border-top: 1px solid #000;
+	display: inline-block;
+	font-family: arial;
+	padding: 0 7px;
+}

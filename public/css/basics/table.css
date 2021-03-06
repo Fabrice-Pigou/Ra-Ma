@@ -1,0 +1,20 @@
+table{
+    border-collapse: collapse;
+}
+tbody tr:nth-child(even){
+    background-color: #eee;
+}
+.table-under{
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+caption{
+    text-align: center;
+    font-size: 3rem ;
+    font-weight: bold;
+    font-family: 'Abril Fatface', cursive;
+}
+table+h4{
+	margin-top: 20px;
+}

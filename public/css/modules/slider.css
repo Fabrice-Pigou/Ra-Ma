@@ -1,0 +1,32 @@
+ div.slideshow {
+ 	border-radius: 0 0 10px 10px;
+ 	border: 3px solid #F2F2F2;
+ 	border: none;
+ 	height: 300px;
+ 	overflow: hidden;
+ 	position: relative;
+ }
+ div.slideshow h1 {
+ 	font-size: 10rem;
+ 	font-weight: normal;
+ 	margin: 0;
+ 	position: absolute;
+ 	right: 20px;
+ 	text-shadow: 2px 2px 2px #555;
+ 	top: 10px;
+ }
+ div.slideshow h1 a {
+ 	color: #33c5ca;
+ }
+ div.slideshow h1:hover {
+ 	text-shadow: 2px 2px 2px #b3b3b3;
+ }
+ div.slideshow ul {
+ 	height: 300px;
+ 	list-style: none;
+ 	padding:0; margin:0;
+ 	width: 600%;
+ }
+ div.slideshow li {
+ 	float: left;
+ }

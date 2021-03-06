@@ -1,0 +1,23 @@
+.info-bulle {
+    position: relative;  /* les .infobulle deviennent référents */
+}
+.info-bulle:hover::after,
+.info-bulle:focus::after {
+    content: attr(aria-label);
+    position: absolute;
+    top: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    white-space: nowrap;
+    padding: 5px 14px;
+    background: #fff;
+    color: rgba(0, 0, 0, .66);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 2px grey;
+}
+[aria-label]:focus {
+    outline: none;
+}

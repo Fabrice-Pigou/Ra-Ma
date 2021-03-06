@@ -1,0 +1,47 @@
+#gasoline{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#gasoline h2{
+    flex-basis: 100%;
+}
+#gasoline section{
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 2px 2px 7px 1px;
+    padding: 0 10px 10px;
+}
+.gasoline-price{
+    width: 24%;
+}
+.table-price{
+    width: 100%;
+}
+.table-price .td1{
+    width: 150px;
+}
+.table-price .td2{
+    width: 150px;
+    text-align: right;
+}
+.table-price .td3{
+    width: 150px;
+    text-align: right;
+}
+.gasoline-stat{
+    width: 59%;
+}
+.gasoline-form{
+    width: 14%;
+}
+#gasoline form{
+    width: 100%;
+}
+#gasoline p{
+    margin: 0;
+}
+#gasoline p + p{
+    margin-top: 10px;
+}

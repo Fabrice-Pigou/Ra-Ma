@@ -1,0 +1,44 @@
+.message-flash{
+    bottom: 10px;
+    position: fixed;
+    right: 10px;
+    text-align: right;
+}
+.flashbag-content{
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 8px 0px 8px 8px ;
+}
+.flashbag{
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px 5px 5px 30px;
+}
+.flashbag + .flashbag{
+    margin-top: 10px;
+}
+.flashbag-info{
+    background-color: var(--bg-info);
+}
+.flashbag-alert{
+    background-color: var(--bg-alert);
+}
+.flashbag-primary{
+    background-color: var(--bg-primary);
+}
+.flashbag-warning{
+    background-color: var(--bg-warning);
+}
+.flashbag-btn{
+    background-color: #fff;
+    border-radius: 8px 8px 0px 0px ;
+    display: inline-block;
+    padding: 3px 20px 3px ;
+    border: 1px solid silver;
+    border-bottom: none;
+    margin-bottom: -1px;
+}
+.flashbag-btn:hover{
+    cursor: pointer;
+}

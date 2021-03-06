@@ -1,0 +1,67 @@
+/*-----------------------------------------------*\
+		PAGE CAR
+\*-----------------------------------------------*/
+.form-car{
+    flex-basis: 400px;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.form-memento textarea{
+    height: 40rem;
+}
+/*-----------------------------------------------*\
+        MENU FORUM
+\*-----------------------------------------------*/
+.form-key{
+    width: 300px;
+    float: left;
+}
+.form-key input:focus{
+    background-color: #fff;
+}
+.form-key input{
+    box-shadow: none;
+    border-color: #fff;
+}
+/*-----------------------------------------------*\
+        FORM ENTRIES
+\*-----------------------------------------------*/
+.form-entries{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-entries p{
+    flex-basis: 48%;
+}
+/*-----------------------------------------------*\
+        MONEY
+\*-----------------------------------------------*/
+.form-account{
+    display: flex;
+    justify-content: space-between;
+}
+.input-account{
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.label-account{
+    text-align: left;
+    display: inline-block;    
+}
+.form-levies{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.form-levies p{
+    flex-basis: 32%;
+    margin: 10px 0;
+}

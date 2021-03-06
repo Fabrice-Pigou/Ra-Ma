@@ -1,0 +1,32 @@
+{% block header %}
+<header class="sticky-top">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand p-0" href="/">
+			<img src="/images/favicon.png" width="50" alt="Logo du site">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto text-right">
+				<li class="nav-item">
+					<a class="nav-link py-0" href="/modify">Moidifier la liste</a>
+				</li>
+			</ul>
+			
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link py-0 pr-5" href="/cash">Pognon</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link py-0" href="/form">Gestion des articles</a>
+				</li>
+			</ul>
+		</div>
+
+	</nav>
+</header>
+<div class="container">{{ flash|raw }}</div>
+{% endblock header %}

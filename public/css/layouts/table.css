@@ -1,0 +1,245 @@
+/*-----------------------------------------------*\
+		PAGE HOME
+\*-----------------------------------------------*/
+.sticky-home{
+	border-top: 1px solid silver;
+	margin-top: 10px;
+	width: 100%;
+}
+.sticky-home tr{
+	border-bottom: 1px solid silver;
+}
+.sticky-home td{
+	padding: 5px;
+	vertical-align: top;
+}
+
+.common-home{
+	border-top: 1px solid silver;
+	margin-top: 10px;
+	width: 100%;
+}
+.common-home tr{
+	border-bottom: 1px solid silver;
+}
+.common-home .td1{
+	padding: 5px 0 5px 5px;
+}
+.common-home .td2{
+	text-align: right;
+	padding-right: 5px;
+}
+
+.money-home{
+	border-top: 1px solid silver;
+	margin-top: 10px;
+	width: 100%;
+}
+.money-home tr{
+	border-bottom: 1px solid silver;
+}
+.money-home .td0{
+	width: 70px;
+	padding-left: 5px;
+}
+.money-home .td1{
+	padding: 5px 0 5px 5px;
+}
+.money-home .td2{
+	text-align: right;
+	padding-right: 5px;
+	width: 150px;
+}
+
+.levis-home{
+
+}
+/*-----------------------------------------------*\
+		PAGE CAR
+\*-----------------------------------------------*/
+.table-car {width: 100%;}
+.car-tr1{border-bottom: 2px solid #000;}
+.car-td1 {
+	vertical-align: top;
+	border-bottom: 1px solid #000;
+	padding: 2px 5px;
+}
+.car-td2 {
+	vertical-align: top;
+	border-bottom: 1px solid #000;
+	margin: 0 5px;
+	padding: 2px 5px;
+}
+.car-td3 {border-bottom: 1px solid #000; padding: 2px 5px;}
+.car-td4 {
+	border-bottom: 1px solid #000;
+	padding: 0 5px;
+	vertical-align: top;
+	padding: 2px 5px;
+}
+/*-----------------------------------------------*\
+		PAGE COMMON
+\*-----------------------------------------------*/
+.table-common-store{
+	width: 100%;
+	margin-top: 2rem;
+}
+.store-tr1{
+	border-bottom: 2px solid var(--primary-3);
+}
+.store-tr2{
+	border-bottom: 1px solid var(--primary-3);
+}
+.store-td1{
+	width: 100%;
+	padding-left: 5px;
+}
+.store-td2{
+	text-align: center;
+	padding: 3px 7px;
+}
+
+.table-spending{
+	width: 100%;
+	margin-top: 2rem;
+}
+.spending-tr1{
+	border-bottom: 2px solid var(--primary-3);
+}
+.spending-tr2{
+	border-bottom: 1px solid var(--primary-3);
+}
+.spending-td1{
+	width: 100px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.spending-td2{
+	padding-left: 5px;
+}
+.spending-td3{
+	text-align: right;
+	width: 120px;
+	padding-right: 5px;
+}
+.spending-td4{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 20px;
+	color: var(--primary-2);
+}
+.spending-td5{
+	border-bottom: 2px solid var(--primary-3);
+	text-align: right;
+	padding-right: 5px;
+	color: var(--primary-2);
+	font-weight: bold;
+}
+.spending-td6{
+	text-align: right;
+	padding-right: 5px;
+	width: 35px;
+	color: var(--primary-3);
+}
+/*-----------------------------------------------*\
+		PAGE MINI FORUM
+\*-----------------------------------------------*/
+.table-forum{
+	width: 100%;
+}
+.forum-tr1{
+	border: 1px solid #000;
+	border-bottom: 0;
+}
+.forum-tr2{
+	border: 1px solid #000;
+	border-top: 0;
+}
+.forum-td1{
+	font-size: 2.5rem;
+	font-weight: bold;
+	padding-left: 10px;
+}
+.forum-td2{
+	font-size: 1.5rem;
+	padding-left: 10px;
+}
+.forum-td3{
+	vertical-align: top;
+	width:  20px;
+	padding: 5px 10px 0;
+}
+.table-subCategory .tr-1{
+	border: 1px solid #000;
+	text-align: left;
+}
+.table-subCategory .tr-2{
+	border: 1px solid #000;
+}
+.table-subCategory .th-1{
+	padding-left: 50px;
+	font-size: 3rem;
+	font-weight: bold;
+}
+.table-subCategory .th-2{
+	width: 20px;
+	padding: 0 10px;
+}
+.table-subCategory .td-1{
+	padding-left: 10px;
+}
+
+.form-cat{
+	width: 500px;
+	margin: 0 auto;
+}
+/*-----------------------------------------------*\
+		PAGE STICKY
+\*-----------------------------------------------*/
+.table-sticky tr{
+	border-bottom: 1px solid silver;
+}
+.sticky-th1{
+	width: 200px;
+	text-align: left;
+	padding-left: 10px;
+}
+.sticky-th2{
+	width: 800px;
+	text-align: left;
+}
+.sticky-td1{
+	padding-left: 10px;
+}
+.sticky-td3{
+	width: 40px;
+	text-align: center;
+}
+/*-----------------------------------------------*\
+		PAGE MONEY
+\*-----------------------------------------------*/
+.table-categories{
+	max-width: 800px;
+	margin: 0 auto 20px;
+}
+/*-----------------------------------------------*\
+		PAGE LEVIES
+\*-----------------------------------------------*/
+.table-levies{
+	width: 90%;
+	margin: 0 auto 20px;
+}
+
+.table-levies .border{
+	border-right: 1px solid #bbb;
+	padding: 3px 5px;
+}
+.table-levies .td-6{
+	text-align: right;
+	padding: 3px 5px;
+}
+
+.money-operation .td4{
+	text-align: center;
+	width: 40px;
+}
