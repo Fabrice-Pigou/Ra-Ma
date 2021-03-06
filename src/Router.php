@@ -20,8 +20,9 @@ class Router
 		$this->controllerPath = $controllerPath;
 		$this->rootPath = $rootPath;
 		$this->router = new AltoRouter();
-		$this->router->addMatchTypes(array('ym' => '([0-9]{4}-[0-9]{1,2})'));
-		$this->router->addMatchTypes(array('date' => '([0-9]{4}-[0-9]{2}-[0-9]{2})'));
+		$this->router->addMatchTypes(array('ym' => '([0-9]{4}-[0-9]{1,2})'));			//	Format de la date yyyy-mm
+		$this->router->addMatchTypes(array('ymd' => '([0-9]{4}-[0-9]{2}-[0-9]{2})'));	//	Format de la date yyyy-mm-dd
+		$this->router->addMatchTypes(array('slug' => '([a-z\-]++)'));
 	}
 
 	public function url(string $name, array $params = [])
