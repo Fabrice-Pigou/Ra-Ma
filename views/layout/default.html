@@ -10,7 +10,7 @@
 	<!--[if IE]>  
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  
 	<![endif]-->
-	<link rel="shortcut icon" href="/images/favicon.png" />
+	<link rel="shortcut icon" href="/images/logo.png" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="/markitup/skins/markitup/style.css" />
 	<link rel="stylesheet" href="/markitup/sets/html/style.css" />
@@ -23,19 +23,15 @@
 	{% include "/layout/footer.html" %}
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="script/jquery.parallax-1.1.js"></script>
+
 	<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<script src="/markitup/jquery.markitup.js"></script>
 	<script src="/markitup/sets/html/set.js"></script>
-	<script type="text/javascript">	
-		$(document).ready(function(){		
-			$('#slide1').parallax("center", 0, 0.1, true);
-			$('#slide2').parallax("center", 900, 0.1, true);
-			$('#slide3').parallax("center", 2900, 0.1, true);
-		})
-	</script>
+
+	<script src="/js/main.js"></script>
+	
 	<script>
 		$(document).ready(function() {
 			$("textarea").markItUp(mySettings);
