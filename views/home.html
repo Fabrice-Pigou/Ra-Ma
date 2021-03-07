@@ -7,10 +7,12 @@
 
 
 {% block content %}
- <section class="container text-center">
-		<div class="slide-inside">
-			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum ea tempora tenetur nemo itaque magnam aliquam natus ad porro perferendis placeat modi atque impedit recusandae, officiis rerum. Eius, porro temporibus!</p>
-		</div>
+ <section class="container">
+		<form class="row my-4" action="/" method="post">
+			{% for line in form %}
+				{{ line | raw }}
+			{% endfor %}
+		</form>
  </section>
 {% endblock content %}
 	

@@ -3,9 +3,8 @@ namespace App\Sessions;
 
 class Modal {
 	/**
-	 *	Affiche le ou les messages flash
-	 *	use App\Sessions\Modal;
-	 *	Modal::SetModal('Le message');
+	 * flash
+	 *		Affiche le ou les messages flash
 	 *
 	 * @return string
 	 */
@@ -46,3 +45,6 @@ class Modal {
 	}
 
 }
+
+// use App\Sessions\Modal;
+// Modal::SetModal('Le message');

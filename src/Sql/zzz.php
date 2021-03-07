@@ -1,16 +1,14 @@
 <?php
-namespace App\Tables;
-
-use App\Sessions\Flash;
+namespace App\Sql;
 
 class Articles extends Table
 {
-	private $pdo;
+	protected $pdo;
 
 	/*----------------------------------------------------------------------------*\
 			AJOUTER
 	\*----------------------------------------------------------------------------*/
-	public function addPatient($data = []){
+	public function AddOne($data = []){
 		$req = $this->pdo->prepare("
 			INSERT INTO patients (nom, email, phone)
 			VALUES(:nom, :email, :phone)
@@ -46,7 +44,7 @@ class Articles extends Table
 	 * @param  string $email l'adresse mail
 	 * @return array        le nom et l'id
 	 */
-	public function getOne($id){
+	public function GetOne($id){
 
 		$req = $this->pdo->prepare('
 			SELECT article_title, article_text
@@ -57,7 +55,16 @@ class Articles extends Table
 		return $req->fetch();
 	}
 
-	public function getByCat($id){
+	public function GetAll(){
+		$req = $this->pdo->query('
+		SELECT *
+		FROM note_articles
+		ORDER BY article_title
+		');
+		return $req->fetchAll();
+	}
+
+	public function GetByCat($id){
 		$req = $this->pdo->prepare('
 		SELECT article_id, article_title, article_url
 		FROM note_articles
@@ -67,11 +74,13 @@ class Articles extends Table
 		$req->execute([$id]);
 		return $req->fetchAll();
 	}
+	
+
 	/**
 	 * Récupère les 20 derniers articles
 	 * @return array
 	 */
-	public function getLast(){
+	public function GetLast(){
 		$req = $this->pdo->query('
 			SELECT article_id, article_title, article_url, category_name,
 			DATE_FORMAT(creation_date, "%d/%m/%Y %Hh%imin%ss") AS date
@@ -87,7 +96,7 @@ class Articles extends Table
 	/*------------------------------------------------------------------------*\
 			MODIFIER
 	\*------------------------------------------------------------------------*/
-	public function updatePhone($id, $phone){
+	public function UpdateOne($id, $phone){
 
 		$req = $this->pdo->prepare('
 			UPDATE patients
@@ -95,19 +104,17 @@ class Articles extends Table
 			WHERE id = ?
 		');
 		$req->execute([$phone, $id]);
-
 	}
 
 	/*------------------------------------------------------------------------*\
 			SUPPRIMER
 	\*------------------------------------------------------------------------*/
-	public function deletePatient($id){
+	public function DeleteOne($id){
 
 		$req = $this->pdo->prepare('
 			DELETE FROM patients
 			WHERE id = ?
 		');
 		$req->execute([$id]);
-
 	}
 }

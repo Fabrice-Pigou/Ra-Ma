@@ -1,5 +1,8 @@
 <?php
 use App\Sessions\Modal;
+use App\Forms\Form;
+
+$oForm = new Form;
 
 /*------------------------------------------------------------------------*\
 			GESTION DES POST
@@ -23,6 +26,8 @@ echo $twig->render('home.html', [
 	'page'			=> 'home',
 	'description'	=> 'Rama Micro FrameWork | Pour bien démarer mes site',
 	'title'			=> 'Rama Micro FrameWork',
+
+	'form'			=> $oForm->FormDef(),
 
 	'modal'		=> Modal::Modal()
 ]);
