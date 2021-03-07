@@ -77,7 +77,7 @@ class Fields
 	}
 
 	/**
-	 * Champ pour les jour d'un mois
+	 * Champ pour les jour d'un mois 1, 2, 3, 4, 5... 31
 	 *
 	 * @param  string $name
 	 * @param  string $label
@@ -150,36 +150,30 @@ class Fields
 
 		return $return;
 	}
-
-	public function Checkbox($label, $datas = [], $connections = [])
+	
+	/**
+	 * Champs Select
+	 *
+	 * @param  string $name
+	 * @param  string $label
+	 * @param  array $data
+	 * @param  string $size
+	 * @param  int $col
+	 * @return void
+	 */
+	public function Select(string $name, string $label, array $data = [], string $size = 'sm', int $col = 12)
 	{
-		$return = '<p>'. $label .'</p>';
-		foreach ($datas as $data) {
-			$checked = '';
-			foreach ($connections as $value) if ($data->id == $value->category) $checked ='checked';
-
-			$return .= '<div class="form-group form-check">';
-			$return .= '<input class="" type="checkbox" name="'. $data->id .'" id="'. $data->id .'" '. $checked .'>';
-			$return .= '<label class="form-check-label pl-2" for="'. $data->id .'">'. $data->name .'</label>';
-			$return .= '</div>';
-		}
-		return $return;
-	}
-
-	public function Select($name, $label, $data = [], $small)
-	{
-		$return = '<div class="form-group col-12">';
+		$return = '<div class="form-group col-12 col-'. $size .'-'. $col .'">';
 		$return .= '<label for="'. $name .'">'. $label .'</label>';
 		$return .= '<select class="form-control" id="'. $name .'" name="'. $name .'">';
-		$return .= '<option value="99">Choisir...</option>';
+		$return .= '<option value="null">Choisir...</option>';
 		
-		foreach ($data as $k=>$n) {
+		foreach ($data as $k => $n) {
 			$selected = '';
 			if (isset($_POST[$name]) AND $_POST[$name] == $k) $selected ='selected';
-			$return .= '<option value="'. $k .'" '. $selected .'>'. $n .'</option>';
+			$return .= '<option value="'. $k .'" '. $selected .'>'. $n->name .'</option>';
 		}
 		$return .= '</select>';
-		$return .= '<small class="form-text text-danger">'. $small .'</small>';
 		$return .= '</div>';
 		return $return;
 	}
@@ -200,4 +194,18 @@ class Fields
 		return $return;
 	}
 
+	// public function Checkbox(array $datas = [], $label, string $size = 'sm', int $col = 12)
+	// {
+	// 	$return = '<div>'. $label .'</div>';
+	// 	$return .= '<div class="form-group form-check col-12 col-'. $size .'-'. $col .'">';
+	// 	foreach ($datas as $data) {
+	// 		$checked = '';
+	// 		foreach ($connections as $value) if ($data->id == $value->category) $checked ='checked';
+
+	// 		$return .= '<input class="" type="checkbox" name="'. $data->id .'" id="'. $data->id .'" '. $checked .'>';
+	// 		$return .= '<label class="form-check-label pl-2" for="'. $data->id .'">'. $data->name .'</label>';
+	// 	}
+	// 	$return .= '</div>';
+	// 	return $return;
+	// }
 }

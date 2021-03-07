@@ -27,7 +27,5 @@ echo $twig->render('home.html', [
 	'description'	=> 'Rama Micro FrameWork | Pour bien démarer mes site',
 	'title'			=> 'Rama Micro FrameWork',
 
-	'form'			=> $oForm->FormDef(),
-
 	'modal'		=> Modal::Modal()
 ]);
