@@ -1,12 +1,35 @@
-{% extends "/layout/default.html" %}
+<!-- ---------------------------------- -->
+<!--	TEMPLATE						-->
+<!-- ---------------------------------- -->
+{% extends "/layout/template.html" %}
 
+<!-- ---------------------------------- -->
+<!--	HEAD							-->
+<!-- ---------------------------------- -->
 {% block head %}
-	<title>Shopping</title>
-	<meta name="description" content="Shopping | Mes courses pour Croq'Kilos">
+	<title>{{ title }}</title>
+	<meta name="description" content="{{ description }}">
 {% endblock head %}
 
+<!-- ---------------------------------- -->
+<!--	HEADER							-->
+<!-- ---------------------------------- -->
+{% block header %}
+	{% include "/layout/header.html" %}
+{% endblock header %}
+
+<!-- ---------------------------------- -->
+<!--	FOOTER							-->
+<!-- ---------------------------------- -->
+{% block footer %}
+	{% include "/layout/footer.html" %}
+{% endblock footer %}
+
+<!-- ---------------------------------- -->
+<!--	CONTENT							-->
+<!-- ---------------------------------- -->
 {% block content %}
-<main class="row m-0">
-	<h2></h2>
+<main class="mb-4">
+	<h2 class="text-center">Titre</h2>
 </main>
 {% endblock content %}

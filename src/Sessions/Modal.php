@@ -3,7 +3,7 @@ namespace App\Sessions;
 
 class Modal {
 	/**
-	 * flash
+	 * Modal
 	 *		Affiche le ou les messages flash
 	 *
 	 * @return string
@@ -34,7 +34,7 @@ class Modal {
 	}
 
 	/**
-	 * setFlash
+	 * SetModal
 	 *
 	 * @param  string $message
 	 */

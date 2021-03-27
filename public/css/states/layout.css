@@ -1,50 +1,41 @@
-@media screen and (max-width:1000px){
-
-}
 /*-----------------------------------------------*\
-		COMMON
+		SMALL
+\*-----------------------------------------------*/
+@media screen and (min-width:540px) {
+	
+}
+
+/*-----------------------------------------------*\
+		MEDIUM
+\*-----------------------------------------------*/
+@media screen and (min-width:768px) {
+	
+}
+
+/*-----------------------------------------------*\
+		LARGE
+\*-----------------------------------------------*/
+@media screen and (min-width:992px) {
+	
+}
+
+/*-----------------------------------------------*\
+		EXTRA LARGE
 \*-----------------------------------------------*/
 @media screen and (min-width:1200px) {
-    .main-common{
-        align-items: flex-start;
-    }
-    .common-store{
-        order: 1;
-        flex-basis: 23%;
-        margin: 0 1%;
-    }
-    .common-content{
-        order: 2;
-        flex-basis: 50%;
-        margin: 0;
-    }
-    .common-entries{
-        order: 3;
-        flex-basis: 23%;
-        margin: 0 1%;
-    }
+	
 }
-/*-----------------------------------------------*\
-		Main
-\*-----------------------------------------------*/
-@media screen and (max-width:700px){
-    .money-menu,
-    .bottom-bar,
-    .topbar,
-    .gasoline-stat,
-    .gasoline-price{
-        display: none;
-    }
 
-    .money-body{
-        width: 100%;
-        margin: 20px 0;
-    }
-    .gasoline-form{
-        width: 100%;
-        margin: 20px;
-    }
-    .money-body p{
-        flex-basis: 100%;
-    }
+/*-----------------------------------------------*\
+		PAYSAGE
+\*-----------------------------------------------*/
+@media (orientation: landscape) {
+	
+}
+
+/*-----------------------------------------------*\
+		Portrait
+\*-----------------------------------------------*/
+@media (orientation: portrait) {
+	
 }

@@ -1,69 +1,69 @@
+/*-----------------------------------------------*\
+		DOSSIER BASICS
+\*-----------------------------------------------*/
+/* @import "base/normalize.css"; */
+/* @import "base/reset.css"; */
+@import "base/primary.css";
+@import "base/form.css";
+@import "base/table.css";
+/*-----------------------------------------------*\
+		DOSSIER LAYOUTS
+\*-----------------------------------------------*/
+@import "layouts/template.css";
+/*-----------------------------------------------*\
+		DOSSIER MODULES
+\*-----------------------------------------------*/
+@import "modules/bbcode.css";
+@import "modules/button.css";
+@import "modules/content.css";
+@import "modules/flashbag.css";
+@import "modules/form.css";
+@import "modules/table.css";
+/*-----------------------------------------------*\
+		DOSSIER STATES
+\*-----------------------------------------------*/
+@import "states/layout.css";
+@import "states/form.css";
+@import "states/table.css";
+
+/*-----------------------------------------------*\
+		LES POLICE
+\*-----------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Oswald|Roboto|EB+Garamond');
 @font-face {
 	font-family: "Dauphinn";
 	src: url("fonts/DAUPHINN_0.TTF") format("truetype");
 }
 /**
+*	font-family: 'Dauphinn', serif;
  *	font-family: 'Abril Fatface', cursive;
  *	font-family: 'Lobster', cursive;
  *	font-family: 'Roboto', sans-serif;
  *	font-family: 'Oswald', sans-serif;
  *	font-family: 'EB Garamond', serif;
- *	font-family: 'Dauphinn', serif;
  **/
-
-/*-----------------------------------------------*\
-		DOSSIER BASICS
-\*-----------------------------------------------*/
-@import "basics/form.css";
-@import "basics/normalize.css";
-@import "basics/primary.css";
-@import "basics/table.css";
-/*-----------------------------------------------*\
-		DOSSIER LAYOUTS
-\*-----------------------------------------------*/
-@import "layouts/base.css";
-@import "layouts/bbcode.css";
-@import "layouts/common.css";
-@import "layouts/content.css";
-@import "layouts/form.css";
-@import "layouts/home.css";
-@import "layouts/table.css";
-@import "layouts/template.css";
-/*-----------------------------------------------*\
-		DOSSIER MODULES
-\*-----------------------------------------------*/
-@import "modules/button.css";
-@import "modules/content.css";
-@import "modules/flashbag.css";
-@import "modules/form.css";
-@import "modules/slider.css";
-@import "modules/table.css";
-/*-----------------------------------------------*\
-		DOSSIER STATES
-\*-----------------------------------------------*/
-@import "states/form.css";
-@import "states/layout.css";
-@import "states/table.css";
 
 /*-----------------------------------------------*\
 		LES COULEURS
 \*-----------------------------------------------*/
 :root {
-	--primary		: #3a5199;
-	--secondary		: #ffffff;
-	--tertiary		: #d5d6d2;
-	--quaternary	: #2f2e33;
+	--color: #333;
 
-	--text		: #333333;
-	--alert		: #f00;
-	--info		: #0ff;
-	--warning	: #ff0;
+	--color-1: #ecdbcc;
+	--color-2: #d3b08d;
+	--color-3: #ebba80;
+	--color-4: #9a816f;
 
-	--bg-primary	: rgba(0, 0, 0, 0.3);
-	--bg-secondary	: rgba(255, 0, 0, 0.5);
-	--bg-tertiary	: rgba(0, 255, 255, 0.5);
-	--bg-quaternary	: rgba(255, 255, 0, 0.5);
+	--info : #28a745;
+	--alert: #dc3545;
+	--success: #17a2b8;
+	
+	--font-1: 'Dauphinn';
+	--font-2: 'Abril Fatface';
+	--font-3: 'Lobster';
+	--font-4: 'Roboto';
+	--font-5: 'Oswald';
+	--font-6: 'EB Garamond';
 }
 
 .xe-warning{
@@ -79,9 +79,4 @@
 	padding: 10px;
 	border-radius: 10px;
 	color: #fff;
-}
-footer .xdebug-var-dump{
-	background-color: transparent;
-	width: auto;
-	padding: 0;
 }

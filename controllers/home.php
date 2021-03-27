@@ -1,9 +1,6 @@
 <?php
 use App\Sessions\Modal;
-use App\Forms\Form;
-
-$oForm = new Form;
-
+Modal::SetModal('Le message');
 /*------------------------------------------------------------------------*\
 			GESTION DES POST
 \*------------------------------------------------------------------------*/
