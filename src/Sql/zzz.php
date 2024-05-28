@@ -1,120 +1,115 @@
 <?php
 namespace App\Sql;
 
+/**
+ * Class Articles
+ * Permet de faire des requetes sur la table articles
+ */
 class Articles extends Table
 {
-	protected $pdo;
+    /*----------------------------------------------------------------------------*\
+            AJOUTER
+    \*----------------------------------------------------------------------------*/
+    /**
+     * AddOne
+     * Ajoute un nouveau patient
+     * 
+     * @param array $data
+     * 
+     * @return int
+     */
+    public function AddOne($data = []): int
+    {
+        $req = $this->pdo->prepare("
+            INSERT INTO articles (nom, email, phone)
+            VALUES(:nom, :email, :phone)
+        ");
+        $req->execute([
+            'nom' => $data['nom'],
+            'email' => $data['email'],
+            'phone' => $data['phone']
+        ]);
 
-	/*----------------------------------------------------------------------------*\
-			AJOUTER
-	\*----------------------------------------------------------------------------*/
-	public function AddOne($data = []){
-		$req = $this->pdo->prepare("
-			INSERT INTO patients (nom, email, phone)
-			VALUES(:nom, :email, :phone)
-		");
-		$req->execute([
-			'nom' => $data['nom'],
-			'email' => $data['email'],
-			'phone' => $data['phone']
-		]);
+        return $this->pdo->lastInsertId();
+    }
 
-		return $this->pdo->lastInsertId();
-	}
+    /*------------------------------------------------------------------------*\
+            COMPTER
+    \*------------------------------------------------------------------------*/
+    /**
+     * CountAll
+     * Compte le nombre total d'articles
+     * 
+     * @return int
+     */
+    public function CountAll(): int
+    {
+        $req = $this->pdo->query('
+            SELECT COUNT(*) AS nbr
+            FROM articles
+        ');
 
-	/*------------------------------------------------------------------------*\
-			COMPTER
-	\*------------------------------------------------------------------------*/
-	public function countAll(){
+        $data = $req->fetch();
+        return $data['nbr'];
+    }
 
-		$req = $this->pdo->query('
-			SELECT COUNT(*) AS nbr
-			FROM patients
-		');
+    /*------------------------------------------------------------------------*\
+            LIRE
+    \*------------------------------------------------------------------------*/
+    /**
+     * GetLast
+     * Récupère les 20 derniers articles
+     * 
+     * @return array
+     */
+    public function GetLast(){
+        $req = $this->pdo->query('
+            SELECT article_id, article_title, article_url, category_name,
+            DATE_FORMAT(term, "%d/%m/%Y %Hh%imin%ss") AS date
+            FROM note_articles art
+            LEFT JOIN note_categories cat
+                ON cat.category_id = art.article_cat
+            ORDER BY article_id DESC
+            LIMIT 0,20
+        ');
+        return $req->fetchAll();
+    }
 
-		$data = $req->fetch();
-		return $data['nbr'];
-	}
+    /*------------------------------------------------------------------------*\
+            MODIFIER
+    \*------------------------------------------------------------------------*/
+        
+    /**
+     * UpdateOne
+     *
+     * @param  mixed $data
+     * @return void
+     */
+    public function UpdateOne(array $data)
+    {
+        $req = $this->pdo->prepare('
+            UPDATE articles
+            SET phone = ?, name = ?
+            WHERE id = ?
+        ');
+        $req->execute([$data['phone'], $data['name'], $data['id']]);
+    }
 
-	/*------------------------------------------------------------------------*\
-			LIRE
-	\*------------------------------------------------------------------------*/
-	/**
-	 * le nom du patient pour un email déjà utilisé
-	 * @param  string $email l'adresse mail
-	 * @return array        le nom et l'id
-	 */
-	public function GetOne($id){
-
-		$req = $this->pdo->prepare('
-			SELECT article_title, article_text
-			FROM note_articles
-			WHERE article_id = ?
-		');
-		$req->execute([$id]);
-		return $req->fetch();
-	}
-
-	public function GetAll(){
-		$req = $this->pdo->query('
-		SELECT *
-		FROM note_articles
-		ORDER BY article_title
-		');
-		return $req->fetchAll();
-	}
-
-	public function GetByCat($id){
-		$req = $this->pdo->prepare('
-		SELECT article_id, article_title, article_url
-		FROM note_articles
-		WHERE article_cat = ?
-		ORDER BY article_title
-		');
-		$req->execute([$id]);
-		return $req->fetchAll();
-	}
-	
-
-	/**
-	 * Récupère les 20 derniers articles
-	 * @return array
-	 */
-	public function GetLast(){
-		$req = $this->pdo->query('
-			SELECT article_id, article_title, article_url, category_name,
-			DATE_FORMAT(creation_date, "%d/%m/%Y %Hh%imin%ss") AS date
-			FROM note_articles art
-			LEFT JOIN note_categories cat
-				ON cat.category_id = art.article_cat
-			ORDER BY article_id DESC
-			LIMIT 0,20
-		');
-		return $req->fetchAll();
-	}
-
-	/*------------------------------------------------------------------------*\
-			MODIFIER
-	\*------------------------------------------------------------------------*/
-	public function UpdateOne($id, $phone){
-
-		$req = $this->pdo->prepare('
-			UPDATE patients
-			SET phone = ?
-			WHERE id = ?
-		');
-		$req->execute([$phone, $id]);
-	}
-
-	/*------------------------------------------------------------------------*\
-			SUPPRIMER
-	\*------------------------------------------------------------------------*/
-	public function DeleteOne($id){
-
-		$req = $this->pdo->prepare('
-			DELETE FROM patients
-			WHERE id = ?
-		');
-		$req->execute([$id]);
-	}
+    /*------------------------------------------------------------------------*\
+            SUPPRIMER
+    \*------------------------------------------------------------------------*/
+    /**
+     * DeleteOne
+     * Supprime une entrée
+     * 
+     * @param $id
+     */
+    public function DeleteOne($id)
+    {
+        $req = $this->pdo->prepare('
+            DELETE FROM articles
+            WHERE id = ?
+        ');
+        $req->execute([$id]);
+    }
 }

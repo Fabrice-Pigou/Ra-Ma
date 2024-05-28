@@ -1,0 +1,117 @@
+/*-----------------------------------------------*\
+		DOSSIER BASICS
+\*-----------------------------------------------*/
+/* @import "base/normalize.css"; */
+/* @import "base/reset.css"; */
+@import "base/primary.css";
+@import "base/form.css";
+@import "base/table.css";
+/*-----------------------------------------------*\
+		DOSSIER LAYOUTS
+\*-----------------------------------------------*/
+@import "layouts/template.css";
+/*-----------------------------------------------*\
+		DOSSIER MODULES
+\*-----------------------------------------------*/
+@import "modules/bbcode.css";
+@import "modules/button.css";
+@import "modules/content.css";
+@import "modules/flashbag.css";
+@import "modules/form.css";
+@import "modules/table.css";
+/*-----------------------------------------------*\
+		DOSSIER STATES
+\*-----------------------------------------------*/
+@import "states/layout.css";
+@import "states/form.css";
+@import "states/table.css";
+
+/*-----------------------------------------------*\
+		LES POLICE
+\*-----------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Oswald|Roboto|EB+Garamond');
+@font-face {
+	font-family: "Dauphinn";
+	src: url("fonts/DAUPHINN_0.TTF") format("truetype");
+}
+/**
+*	font-family: 'Dauphinn', serif;
+ *	font-family: 'Abril Fatface', cursive;
+ *	font-family: 'Lobster', cursive;
+ *	font-family: 'Roboto', sans-serif;
+ *	font-family: 'Oswald', sans-serif;
+ *	font-family: 'EB Garamond', serif;
+ **/
+
+/*-----------------------------------------------*\
+		LES COULEURS
+\*-----------------------------------------------*/
+:root {
+	--background-low:		#000;
+	--background-m-low:		#202020;
+	--background:			#313131;
+	--background-m-high:	#565656;
+	--background-high:		#aaa;
+
+	--text-low:		#313131;
+	--text-m-low:	#7a7a7a;
+	--text:			#eee;
+	--text-m-high:	#c6f6ff;
+	--text-high:	#55e0f8;
+
+	--primary-low:		#55e0f8;
+	--primary-m-mid:	#55e0f8;
+	--primary:			#00d9ff;
+	--primary-m-high:	#c6f6ff;
+	--primary-high:		#55e0f8;
+
+	--secondary-low:	#E67E30;
+	--secondary-m-low:	#F4661B;
+	--secondary:		#ff6400;
+	--secondary-m-high:	#ffddc7;
+	--secondary-high:	#ffddc7;
+
+	--tertiary-low:		#FFD700;
+	--tertiary-m-low:	#FFD700;
+	--tertiary:			#FFD700;
+	--tertiary-m-hight:	#FFD700;
+	--tertiary-hight:	#FFD700;
+
+	--quaternary-low:		#c14924;
+	--quaternary-m-low:		#c14924;
+	--quaternary:			#c14924;
+	--quaternary-m-hight:	#c14924;
+	--quaternary-hight:		#c14924;
+
+	--color-success:	#34C924;
+	--color-danger:		#DC143C;
+	--color-warning:	#F0C300;
+	--color-info:		#20B2AA;
+
+	--font-primary:		'Roboto', sans-serif;
+	--font-secondary:	'EB Garamond', serif;
+	--font-tertiary:	'Oswald', sans-serif;
+	--font-quaternary:	'Dauphinn', serif;
+
+	--border-low:		#444;
+	--border-m-low:		#666;
+	--border-medium:	#888;
+	--border-m-hight:	#aaa;
+	--border-hight:		#ccc;
+}
+
+.xe-warning{
+	font-size: 2rem;
+}
+.xdebug-var-dump font{
+	color: #0f0;
+}
+.xdebug-var-dump{
+	font-size: 1rem;
+	background-color: #27333d;
+	max-width: 1500px;
+	margin: 20px auto;
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff;
+}

@@ -1,0 +1,16 @@
+{#			TEMPLATE										#}
+{% extends "/layout/template.html.twig" %}
+
+{#			HEAD											#}
+{% block head %}
+	<title>{{ title }}</title>
+	<meta name="description" content="{{ description }}">
+{% endblock head %}
+
+{#			CONTENT											#}
+{% block content %}
+<main class="mb-4">
+	<h2 class="text-center">{{ title }}</h2>
+	<p>Le nombre mystère est: {{ nomber }}
+</main>
+{% endblock content %}

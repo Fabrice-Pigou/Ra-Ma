@@ -1,22 +1,36 @@
 <?php 
 namespace App\Lib;
 
+/**
+ * Class Text
+ * Permet de convertir du texte en diférent format
+ */
 class Text
 {
 	/**
+	 * ArrayToObjet
 	 * Convertie un tableau en objet
+	 * 
 	 * @param array $data
+	 * 
 	 * @return object
 	 */
-	public function ToObjet($data)
+	public function ArrayToObjet($data): object
 	{
 		$data = json_encode($data);
 		$data = json_decode($data);
 		return $data;
 	}
 
-	//	Convertie un objet en tableau
-	public function ToArray($data)
+	/**
+	 * ObjetToArray
+	 * Convertie un objet en tableau
+	 * 
+	 * @param array $data
+	 * 
+	 * @return array
+	 */
+	public function ObjetToArray($data): array
 	{
 		$data = json_encode($data);
 		$data = json_decode($data, true);
@@ -24,37 +38,77 @@ class Text
 	}
 
 	/**
-	 * Récupère l'extrait d'un texte
+	 * Excerpt
+	 * Récupère l'extrait d'un texte à la fin d'un mot
+	 *
 	 * @param string $content
-	 * @param int $limit
+	 * @param int $limit Le nombres de caractère minimum à afficher (150 par défaut)
+	 *
 	 * @return string
 	 */
-	public static function excerpt(string $content, int $limit = 60):string
+	public static function Excerpt(string $content, int $limit = 150): string
 	{
+		//	Si le texte a moins de caractère que "$limit", on le retourne tel qu'elle
 		if (mb_strlen($content) <= $limit) {
 			return $content;
 		}
+		//	On cherche un espace après le caractère défini par $limit
 		$lastSpace = mb_strpos($content, ' ', $limit);
+		//	On retourne l'extrait avec un mot complet pour finir(Plus joli à l'affichage)
 		return mb_substr($content, 0, $lastSpace) .' ...';
 	}
 
 	/**
+	 * Slugify
 	 * Convertie une chaine de caractère pour affichage dans la chaîne de requète(URL)
+
 	 * @param string $sString
+
 	 * @return string
 	 */
-	public function slug(string $content):string {
+	public function Slugify(string $content):string {
 		$content = preg_replace('#-#', ' ', $content);
 		$content = transliterator_transliterate("Any-Latin; NFD; [:Nonspacing Mark:] Remove; NFC; [:Punctuation:] Remove; Lower();", $content);
 		$content = preg_replace('# #', '-', $content);
 		$content = preg_replace('#---#', '-', $content);
 		$content = preg_replace('#--#', '-', $content);
 		$content = preg_replace('#œ#', 'oe', $content);
+		$content = preg_replace('#æ#', 'ae', $content);
 		$content = trim($content,'-');
 		return $content;
 	}
 
-	public function bbcode($text)
+	/**
+	 * Slug
+	 * Convertie une chaine de caractère pour affichage dans la chaîne de requète(URL)
+	 * 
+	 * @param string $string
+	 * @param string $delimiter '-' par défaut
+	 * 
+	 * @return string
+	 */
+	public function Slug(string $string, string $delimiter = '-'): string
+	{
+		$oldLocale = setlocale(LC_ALL, '0');
+		setlocale(LC_ALL, 'fr_FR.UTF-8');
+		$clean = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
+		$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+		$clean = strtolower($clean);
+		$clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+		$clean = trim($clean, $delimiter);
+		setlocale(LC_ALL, $oldLocale);
+		return $clean;
+	}
+
+	/**
+	 * RamaCode
+	 * Converti une chaine de caractère pour afficher des balise html
+	 * 
+	 * @param string $text
+	 * 
+	 * @return string
+	 */
+	public function RamaCode($text)
 	{
 		$text = htmlspecialchars($text);
 		$text = preg_replace('#\[b\](.+)\[/b\]#isU', '<strong>$1</strong>', $text);

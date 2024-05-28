@@ -1,35 +1,5 @@
-/*-----------------------------------------------*\
-		DOSSIER BASICS
-\*-----------------------------------------------*/
-/* @import "base/normalize.css"; */
-/* @import "base/reset.css"; */
-@import "base/primary.css";
-@import "base/form.css";
-@import "base/table.css";
-/*-----------------------------------------------*\
-		DOSSIER LAYOUTS
-\*-----------------------------------------------*/
-@import "layouts/template.css";
-/*-----------------------------------------------*\
-		DOSSIER MODULES
-\*-----------------------------------------------*/
-@import "modules/bbcode.css";
-@import "modules/button.css";
-@import "modules/content.css";
-@import "modules/flashbag.css";
-@import "modules/form.css";
-@import "modules/table.css";
-/*-----------------------------------------------*\
-		DOSSIER STATES
-\*-----------------------------------------------*/
-@import "states/layout.css";
-@import "states/form.css";
-@import "states/table.css";
-
-/*-----------------------------------------------*\
-		LES POLICE
-\*-----------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Oswald|Roboto|EB+Garamond');
+
 @font-face {
 	font-family: "Dauphinn";
 	src: url("fonts/DAUPHINN_0.TTF") format("truetype");
@@ -47,28 +17,79 @@
 		LES COULEURS
 \*-----------------------------------------------*/
 :root {
-	--color: #333;
+	--background-low:		rgb(0 0 0);
+	--background-m-low:		rgb(68 68 68);
+	--background:			rgb(136 136 136);
+	--background-m-high:	rgb(204 204 204);
+	--background-high:		rgb(255 255 255);
 
-	--color-1: #ecdbcc;
-	--color-2: #d3b08d;
-	--color-3: #ebba80;
-	--color-4: #9a816f;
+	--text-low:		#313131;
+	--text-m-low:	#7a7a7a;
+	--text:			#eee;
+	--text-m-high:	#c6f6ff;
+	--text-high:	#55e0f8;
 
-	--info : #28a745;
-	--alert: #dc3545;
-	--success: #17a2b8;
-	
-	--font-1: 'Dauphinn';
-	--font-2: 'Abril Fatface';
-	--font-3: 'Lobster';
-	--font-4: 'Roboto';
-	--font-5: 'Oswald';
-	--font-6: 'EB Garamond';
+	--primary-low:		#000;
+	--primary-m-mid:	#444;
+	--primary:			#888;
+	--primary-m-high:	#bbb;
+	--primary-high:		#fff;
+
+	--secondary-low:	#72ffff;
+	--secondary-m-low:	#4bf6ff;
+	--secondary:		#00d9ff;
+	--secondary-m-high:	#00bde2;
+	--secondary-high:	#00a2c6;
+
+	--tertiary-low:		#ffff5a;
+	--tertiary-m-low:	#fff338;
+	--tertiary:			#ffd700;
+	--tertiary-m-hight:	#e0bb00;
+	--tertiary-hight:	#c2a100;
+
+	--quaternary-low:		#962202;
+	--quaternary-m-low:		#ac3613;
+	--quaternary:			#c14924;
+	--quaternary-m-hight:	#e0643b;
+	--quaternary-hight:		#ff7e54;
+
+	--color-success:	#34C924;
+	--color-danger:		#DC143C;
+	--color-warning:	#F0C300;
+	--color-info:		#20B2AA;
+
+	--font-primary:		'Roboto', sans-serif;
+	--font-secondary:	'EB Garamond', serif;
+	--font-tertiary:	'Oswald', sans-serif;
+	--font-quaternary:	'Dauphinn', serif;
+	--font-table:		'Dauphinn', serif;
+	--font-form:		'Dauphinn', serif;
+	--font-list:		'Dauphinn', serif;
+	--font-title:		'Dauphinn', serif;
+
+	--border-low:		#444;
+	--border-m-low:		#666;
+	--border-medium:	#888;
+	--border-m-hight:	#aaa;
+	--border-hight:		#ccc;
 }
 
+/*-----------------------------------------------------------------------------*\
+		BASE		(body, p, h1, h2...)
+\*-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------*\
+		LAYOUT		(l-header, l-sidebar, l-footer...)
+\*-----------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------*\
+		MODULE		(.widget, .list, .btn, .title, .form, .table...)
+\*-----------------------------------------------------------------------------*/
+/*			Message d'erreur	*/
 .xe-warning{
 	font-size: 2rem;
 }
+/*			var_dump	*/
 .xdebug-var-dump font{
 	color: #0f0;
 }
@@ -79,4 +100,36 @@
 	padding: 10px;
 	border-radius: 10px;
 	color: #fff;
+}
+/*-----------------------------------------------------------------------------*\
+		STATE		(is-active, is-visible, is-hidden, responcive...)
+\*-----------------------------------------------------------------------------*/
+/*			Small		*/
+@media screen and (min-width:540px) {
+	
+}
+
+/*			Medium		*/
+@media screen and (min-width:768px) {
+	
+}
+
+/*			Large		*/
+@media screen and (min-width:992px) {
+	
+}
+
+/*			Extra large		*/
+@media screen and (min-width:1200px) {
+	
+}
+
+/*			Paysage		*/
+@media (orientation: landscape) {
+	
+}
+
+/*			Portrait		*/
+@media (orientation: portrait) {
+	
 }

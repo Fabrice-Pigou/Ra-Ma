@@ -1,29 +1,42 @@
-|---controllers
+|---[]controllers
 |	|---
 |
-|---lib
+|---[]lib
 |	|---
 |
-|---public
-|	|---
-|
-|---src
-|	|---Controls
-|	|	|---modify.php
-|	|
-|	|---Html
+|---[]public
+|	|---[]css
 |	|	|---
 |	|
-|	|---lib
+|	|---[]images
+|	|	|--- 
+|	|
+|	|---[]js
+|	|	|--- 
+|	|
+|	|--- index.php
+|
+|---[]src
+|	|---[]Controls
 |	|	|---
 |	|
-|	|---Tables
-|	|	|---shopping.php
-|	|	|---Articles.php
-|			
-|---views
-	|---layout
-	|	|---header.html
+|	|---[]Form
+|	|	|---
+|	|
+|	|---[]Lib
+|	|	|---
+|	|
+|	|---[]Sessions
+|	|	|---
+|	|
+|	|---[]Sql
+|	|	|---
+|	|
+|	|---[]Tables
+|	|	|---
+|
+|---[]views
+	|---[]layout
+	|	|---
 	|
-	|---dlc.html
-	|---form.html
+	|---

@@ -1,6 +1,4 @@
 {
-	"name": "Goupy | Rama",
-	"description": "Point de départ de mon mini micro FrameWork",
 	
 	"autoload": {
 		"files" : ["lib/helpers.php", "lib/vars.php"],
@@ -10,10 +8,10 @@
 	},
 
 	"require": {
-		"altorouter/altorouter": "1.2.0",
+		"altorouter/altorouter": "^2.0",
 		"twig/twig": "^3.0",
-		// Production
-		"fzaninotto/faker": "1.9.0"
+		
+		"fakerphp/faker": "^1.0"
 	}
 
 }

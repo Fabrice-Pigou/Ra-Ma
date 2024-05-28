@@ -1,0 +1,33 @@
+src/Router.php
+	function run()
+		Activer le cash
+			$this->rootPath .'/tmp',
+		Supprimer
+			$twig->addExtension(new \Twig\Extension\DebugExtension());
+
+public/
+	Supprimer
+		adminer.php
+		fill.php
+
+public/index.php
+	Changer
+		ini_set('display_errors',0);
+	Supprimer
+		header('Cache-Control: no-cache, no-store, must-revalidate');
+		header('Pragma: no-cache');
+		header('Expires: 0');
+
+views/layout/template.html
+	Supprimer
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+src/Sql/Table.php
+	Modifier les variables de connexion
+	Supprimer la ligne d'affichage des erreurs
+
+composer.json
+	Supprimer
+		"fakerphp/faker": "^1.19"

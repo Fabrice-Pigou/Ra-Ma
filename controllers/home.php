@@ -1,28 +1,31 @@
 <?php
 use App\Sessions\Modal;
-Modal::SetModal('Le message');
+// Modal::SetModal('Merde a celui qui le lira');
+
 /*------------------------------------------------------------------------*\
-			GESTION DES POST
+            GESTION DES GET
 \*------------------------------------------------------------------------*/
-if (isset($_POST['id'])) {
-	
+if(isset($params) && $params != null){
+    var_dump($params);
 }
 
 /*------------------------------------------------------------------------*\
-			GESTION DES GET
+            GESTION DES POST
 \*------------------------------------------------------------------------*/
-if(isset($params['action'])){
-	
+if (isset($_POST) && $_POST != null) {
+    var_dump($_POST);
 }
 
 /*------------------------------------------------------------------------*\
-			VARIABLES POUR TWIG
+            VARIABLES POUR TWIG
 \*------------------------------------------------------------------------*/
+echo $twig->render('home.html.twig', [
+    'page'          => 'home',
+    'description'   => 'Bienvenue sur la page des flashcards de notre plateforme de e-learning ! Ici, vous trouverez un outil puissant pour améliorer votre apprentissage et renforcer vos connaissances de manière interactive.',
+    'title'         => 'Cartes mémoire | '. NAME,
+    'name'          => NAME,
+    'slogan'        => SLOGAN,
+    'session'       => $_SESSION,
 
-echo $twig->render('home.html', [
-	'page'			=> 'home',
-	'description'	=> 'Rama Micro FrameWork | Pour bien démarer mes site',
-	'title'			=> 'Rama Micro FrameWork',
-
-	'modal'		=> Modal::Modal()
+    'modal'         => Modal::Modal()
 ]);
