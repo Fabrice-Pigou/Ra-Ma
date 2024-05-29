@@ -11,13 +11,11 @@ class Router
      * @var string $controllerPath
      * @var string $rootPath
      * @var object $router
-     * @var object $oText
      * @var object $oTwig
      */
     private string $controllerPath;
     private string $rootPath;
     private object $router;
-    private object $oText;
     private object $oTwig;
 
     public function __construct(string $controllerPath, string $rootPath)
@@ -25,11 +23,12 @@ class Router
         $this->controllerPath = $controllerPath;
         $this->rootPath = $rootPath;
         $this->router = new AltoRouter();
+        //  Ajouter des nouveaux MatchType à AltoRouter
         // $this->router->addMatchTypes(array('ym' => '([0-9]{4}-[0-9]{1,2})'));            //  Format de la date yyyy-mm
         // $this->router->addMatchTypes(array('ymd' => '([0-9]{4}-[0-9]{2}-[0-9]{2})'));    //  Format de la date yyyy-mm-dd
         $this->router->addMatchTypes(array('slug' => '([a-z\-]++)'));
+
         $this->oTwig = new TwigFunctions;
-        $this->oText = new Text;
     }
 
     /**
@@ -84,7 +83,7 @@ class Router
         });
         $twig->addFunction($navLink);
 
-        //  Permet d'utiliser le "dump()" de txig
+        //  Permet d'utiliser le "dump()" de twig
         $twig->addExtension(new \Twig\Extension\DebugExtension());
 
         require $this->controllerPath . DIRECTORY_SEPARATOR . $view .'.php';

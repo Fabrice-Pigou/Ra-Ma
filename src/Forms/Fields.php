@@ -2,16 +2,16 @@
 namespace App\Forms;
 
 class Fields
-{    
+{
     /**
      * Champ Text
      *
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  string    $required    Si le champs est obligatoir
-     * @param  string    $value        Valeur du champ
+     * @param  string   $name      Le nom de la variable retourné
+     * @param  string   $label     Label du champ
+     * @param  string   $size      La taille du container(twig)
+     * @param  int      $col       Le nombre de collone utilisé dans twig
+     * @param  string   $required  Si le champs est obligatoire
+     * @param  string   $value     Valeur du champ
      * 
      * @return string
      */
@@ -30,13 +30,13 @@ class Fields
     /**
      * Textarea
      *
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  string    $required    Si le champs est obligatoir
-     * @param  string    $value        Valeur du champ
-     * @param  int        $rows        Le nombre de ligne du textarea
+     * @param  string   $name       Le nom de la variable retourné
+     * @param  string   $label      Label du champ
+     * @param  string   $size       La taille du container(twig)
+     * @param  int      $col        Le nombre de collone utilisé dans twig
+     * @param  string   $required   Si le champs est obligatoire
+     * @param  string   $value      Valeur du champ
+     * @param  int      $rows       Le nombre de ligne du textarea
      * 
      * @return string
      */
@@ -55,12 +55,12 @@ class Fields
     /**
      * Champ Email
      *
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  string    $required    Si le champs est obligatoir
-     * @param  string    $value        Valeur du champ
+     * @param  string   $name       Le nom de la variable retourné
+     * @param  string   $label      Label du champ
+     * @param  string   $size       La taille du container(twig)
+     * @param  int      $col        Le nombre de collone utilisé dans twig
+     * @param  string   $required   Si le champs est obligatoire
+     * @param  string   $value      Valeur du champ
      * 
      * @return string
      */
@@ -80,12 +80,13 @@ class Fields
      * Radio
      * Les zones d'options
      * 
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  string    $value        Valeur du champ
-     * @param  string    $checked    Si une case est déjà cochée
+     * @param  string   $name       Le nom de la variable retourné
+     * @param  string   $label      Label du champ
+     * @param  string   $size       La taille du container(twig)
+     * @param  int      $col        Le nombre de collone utilisé dans twig
+     * @param  string   $required   Si le champs est obligatoire
+     * @param  string   $value      Valeur du champ
+     * @param  string   $checked    Si une case est déjà cochée
      * 
      * @return string
      */
@@ -103,12 +104,12 @@ class Fields
     /**
      * Champ Password
      *
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  string    $required    Si le champs est obligatoir
-     * @param  string    $value        Valeur du champ
+     * @param  string   $name       Le nom de la variable retourné
+     * @param  string   $label      Label du champ
+     * @param  string   $size       La taille du container(twig)
+     * @param  int      $col        Le nombre de collone utilisé dans twig
+     * @param  string   $required   Si le champs est obligatoire
+     * @param  string   $value      Valeur du champ
      * 
      * @return string
      */
@@ -127,12 +128,12 @@ class Fields
     /**
      * Champ Term
      *
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  string    $required    Si le champs est obligatoir
-     * @param  string    $value        Valeur du champ
+     * @param  string   $name       Le nom de la variable retourné
+     * @param  string   $label      Label du champ
+     * @param  string   $size       La taille du container(twig)
+     * @param  int      $col        Le nombre de collone utilisé dans twig
+     * @param  string   $required   Si le champs est obligatoire
+     * @param  string   $value      Valeur du champ
      * 
      * @return string
      */
@@ -153,10 +154,10 @@ class Fields
      * Day 
      * Champ pour les jour d'un mois 1, 2, 3, 4, 5... 31
      *
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
+     * @param  string   $name   Le nom de la variable retourné
+     * @param  string   $label  Label du champ
+     * @param  string   $size   La taille du container(twig)
+     * @param  int      $col    Le nombre de collone utilisé dans twig
      * 
      * @return string
      */
@@ -180,12 +181,12 @@ class Fields
     /**
      * Champ Number
      *
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  string    $required    Si le champs est obligatoir
-     * @param  string    $value        Valeur du champ
+     * @param  string   $name       Le nom de la variable retourné
+     * @param  string   $label      Label du champ
+     * @param  string   $size       La taille du container(twig)
+     * @param  int      $col        Le nombre de collone utilisé dans twig
+     * @param  string   $required   Si le champs est obligatoire
+     * @param  string   $value      Valeur du champ
      * 
      * @return string
      */
@@ -204,12 +205,12 @@ class Fields
     /**
      * Champ Float
      *
-     * @param  string    $name        Le nom de la variable retourné
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  string    $required    Si le champs est obligatoir
-     * @param  string    $value        Valeur du champ
+     * @param  string   $name       Le nom de la variable retourné
+     * @param  string   $label      Label du champ
+     * @param  string   $size       La taille du container(twig)
+     * @param  int      $col        Le nombre de collone utilisé dans twig
+     * @param  string   $required   Si le champs est obligatoire
+     * @param  string   $value      Valeur du champ
      * 
      * @return string
      */
@@ -228,11 +229,11 @@ class Fields
     /**
      * Champs Select
      *
-     * @param  string    $name    Le nom de la variable retourné
-     * @param  string    $label    Label du champ
-     * @param  string    $size    La taille du container(twig)
-     * @param  int        $col    Le nombre de collone utilisé dans twig
-     * @param  array    $data    Le tableau pour lister les option
+     * @param  string   $name   Le nom de la variable retourné
+     * @param  string   $label  Label du champ
+     * @param  string   $size   La taille du container(twig)
+     * @param  int      $col    Le nombre de collone utilisé dans twig
+     * @param  array    $data   Le tableau pour lister les option
      * 
      * @return string
      */
@@ -259,8 +260,8 @@ class Fields
     /**
      * Champs Hidden
      *
-     * @param  string    $name    Le nom de la variable retourné
-     * @param  string    $value    Valeur du champ
+     * @param  string   $name   Le nom de la variable retourné
+     * @param  string   $value  Valeur du champ
      * 
      * @return string
      */
@@ -274,7 +275,7 @@ class Fields
     /**
      * Champs Submit
      *
-     * @param  string    $value    Le nom du bouton
+     * @param  string   $value  Le nom du bouton
      * 
      * @return string
      */
@@ -290,10 +291,10 @@ class Fields
     /**
      * Champ Checkbox
      *
-     * @param  string    $label        Label du champ
-     * @param  string    $size        La taille du container(twig)
-     * @param  int        $col        Le nombre de collone utilisé dans twig
-     * @param  array    $data        Tableau contenant les valeurs pour les checkbox
+     * @param  string   $label  Label du champ
+     * @param  string   $size   La taille du container(twig)
+     * @param  int      $col    Le nombre de collone utilisé dans twig
+     * @param  array    $data   Tableau contenant les valeurs pour les checkbox
      * 
      * @return string
      */

@@ -21,7 +21,7 @@ if (isset($_POST) && $_POST != null) {
 \*------------------------------------------------------------------------*/
 echo $twig->render('home.html.twig', [
     'page'          => 'home',
-    'description'   => 'Bienvenue sur la page des flashcards de notre plateforme de e-learning ! Ici, vous trouverez un outil puissant pour améliorer votre apprentissage et renforcer vos connaissances de manière interactive.',
+    'description'   => '',
     'title'         => 'Cartes mémoire | '. NAME,
     'name'          => NAME,
     'slogan'        => SLOGAN,

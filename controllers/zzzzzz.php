@@ -21,8 +21,8 @@ if(isset($params) && $params != null){
 \*------------------------------------------------------------------------*/
 echo $twig->render($page . '.html.twig', [
     'page'          => $page,
-    'description'   => 'Bienvenue sur la page des flashcards de notre plateforme de e-learning ! Ici, vous trouverez un outil puissant pour améliorer votre apprentissage et renforcer vos connaissances de manière interactive.',
-    'title'         => 'Cartes mémoire | '. NAME,
+    'description'   => '',
+    'title'         => ' | '. NAME,
     'name'          => NAME,
     'slogan'        => SLOGAN,
     'session'       => $_SESSION,

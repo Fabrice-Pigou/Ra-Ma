@@ -63,7 +63,7 @@ class Checking{
     /**
      * Vérifie si il y à des catégories lié à une sous catégorie
      *
-     * @param  string $data
+     * @param  mixed $data
      * @param  mixed $message
      *
      * @return bool
@@ -80,7 +80,7 @@ class Checking{
     /**
      * Vérification du format d'une date (xxxx-xx-xx)
      * 
-     * @param  date $date
+     * @param  string $date
      * 
      * @return bool
      */

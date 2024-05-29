@@ -10,13 +10,13 @@ use App\Sessions\Modal;
 class CheckList extends Checking
 {
     /**
-     * Vérification des champs du formulaire des mouvements fixe
+     * Vérification des champs du formulaire
      * 
      * @param array $data
      * 
      * @return bool
      */
-    public function CheckingFixed(array $data):bool
+    public function CheckingForm(array $data):bool
     {
         $i = 0;
         //    Champs 'provider'
@@ -27,9 +27,9 @@ class CheckList extends Checking
         if ($this->SelectField($data['family'], 'Quelle famille ?')) $i ++;
         //    Le champs 'amount'
         if ($this->EmptyField($data['amount'], 'Quelle montant ?')) $i ++;
-        
+
         if ($i === 0) return true;
-        
+
         return false;
     }
 
