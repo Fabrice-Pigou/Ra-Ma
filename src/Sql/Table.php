@@ -11,10 +11,10 @@ class Table {
 
     protected $pdo = NULL;
 
-    protected $host     = 'localhost';
-    protected $dbname   = 'rama';
-    protected $login    = 'root';
-    protected $password = '';
+    protected $host     = HOST;
+    protected $dbname   = DBNAME;
+    protected $login    = LOGIN;
+    protected $password = PASSWORD;
 
     public function __construct() {
         if($this->pdo === null) $this->pdo = $this->getPDO();

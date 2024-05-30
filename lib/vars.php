@@ -4,3 +4,8 @@ define('ROOT', dirname(__DIR__));
 define('NAME', '');
 //  Le slogan du site
 define('SLOGAN', '');
+//  Les variable de conexion à la bdd
+define('HOST', 'localhost');
+define('DBNAME', 'rama');
+define('LOGIN', 'root');
+define('PASSWORD', '');
